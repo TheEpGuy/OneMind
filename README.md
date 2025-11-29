@@ -2,6 +2,8 @@
 
 A Multi-AI Roleplay Sandbox built with React and the Vercel AI SDK. Create characters, design locations, and run AI-powered roleplay conversations with multiple AI providers.
 
+**[🚀 Try the Live Demo](https://onemind-phi.vercel.app/)**
+
 ![React](https://img.shields.io/badge/React-19-blue)
 ![TypeScript](https://img.shields.io/badge/TypeScript-5.8-blue)
 ![License](https://img.shields.io/badge/License-MIT-green)
