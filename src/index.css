@@ -1,0 +1,174 @@
+@import "tailwindcss";
+@import "tw-animate-css";
+
+@custom-variant dark (&:is(.dark *));
+
+@theme inline {
+  --radius-sm: calc(var(--radius) - 4px);
+  --radius-md: calc(var(--radius) - 2px);
+  --radius-lg: var(--radius);
+  --radius-xl: calc(var(--radius) + 4px);
+  --color-background: var(--background);
+  --color-foreground: var(--foreground);
+  --color-card: var(--card);
+  --color-card-foreground: var(--card-foreground);
+  --color-popover: var(--popover);
+  --color-popover-foreground: var(--popover-foreground);
+  --color-primary: var(--primary);
+  --color-primary-foreground: var(--primary-foreground);
+  --color-secondary: var(--secondary);
+  --color-secondary-foreground: var(--secondary-foreground);
+  --color-muted: var(--muted);
+  --color-muted-foreground: var(--muted-foreground);
+  --color-accent: var(--accent);
+  --color-accent-foreground: var(--accent-foreground);
+  --color-destructive: var(--destructive);
+  --color-border: var(--border);
+  --color-input: var(--input);
+  --color-ring: var(--ring);
+  --color-chart-1: var(--chart-1);
+  --color-chart-2: var(--chart-2);
+  --color-chart-3: var(--chart-3);
+  --color-chart-4: var(--chart-4);
+  --color-chart-5: var(--chart-5);
+  --color-sidebar: var(--sidebar);
+  --color-sidebar-foreground: var(--sidebar-foreground);
+  --color-sidebar-primary: var(--sidebar-primary);
+  --color-sidebar-primary-foreground: var(--sidebar-primary-foreground);
+  --color-sidebar-accent: var(--sidebar-accent);
+  --color-sidebar-accent-foreground: var(--sidebar-accent-foreground);
+  --color-sidebar-border: var(--sidebar-border);
+  --color-sidebar-ring: var(--sidebar-ring);
+}
+
+:root {
+  --radius: 8px;
+
+  /* OneMind Dark Blue Theme */
+  --background: #18191c;
+  --foreground: #e3e4e6;
+  --card: #212327;
+  --card-foreground: #e3e4e6;
+  --popover: #2b2e33;
+  --popover-foreground: #e3e4e6;
+  --primary: #5865f2;
+  --primary-foreground: #ffffff;
+  --secondary: #34373d;
+  --secondary-foreground: #b9bbbe;
+  --muted: #34373d;
+  --muted-foreground: #b9bbbe;
+  --accent: #8a96ff;
+  --accent-foreground: #ffffff;
+  --destructive: #f04747;
+  --border: #404449;
+  --input: #2b2e33;
+  --ring: #5865f2;
+  --chart-1: #5865f2;
+  --chart-2: #8a96ff;
+  --chart-3: #6976ff;
+  --chart-4: #c9cfff;
+  --chart-5: #4752c4;
+  --sidebar: #212327;
+  --sidebar-foreground: #e3e4e6;
+  --sidebar-primary: #5865f2;
+  --sidebar-primary-foreground: #ffffff;
+  --sidebar-accent: #34373d;
+  --sidebar-accent-foreground: #b9bbbe;
+  --sidebar-border: #303338;
+  --sidebar-ring: #5865f2;
+}
+
+.dark {
+  /* Dark theme uses same OneMind colors */
+  --background: #18191c;
+  --foreground: #e3e4e6;
+  --card: #212327;
+  --card-foreground: #e3e4e6;
+  --popover: #2b2e33;
+  --popover-foreground: #e3e4e6;
+  --primary: #5865f2;
+  --primary-foreground: #ffffff;
+  --secondary: #34373d;
+  --secondary-foreground: #b9bbbe;
+  --muted: #34373d;
+  --muted-foreground: #b9bbbe;
+  --accent: #8a96ff;
+  --accent-foreground: #ffffff;
+  --destructive: #f04747;
+  --border: #404449;
+  --input: #2b2e33;
+  --ring: #5865f2;
+}
+
+@layer base {
+  * {
+    @apply border-border outline-ring/50;
+  }
+  body {
+    @apply bg-background text-foreground;
+  }
+}
+
+/* Hide scrollbars but keep functionality */
+.no-scrollbar {
+  -ms-overflow-style: none;  /* IE and Edge */
+  scrollbar-width: none;  /* Firefox */
+}
+
+.no-scrollbar::-webkit-scrollbar {
+  display: none;  /* Chrome, Safari and Opera */
+}
+
+/* Smooth drag scrolling */
+.drag-scroll {
+  cursor: grab;
+  user-select: none;
+}
+
+.drag-scroll:active {
+  cursor: grabbing;
+}
+
+/* OneMind specific enhancements */
+body {
+  font-family: 'Outfit', system-ui, -apple-system, sans-serif;
+  background: #18191c;
+}
+
+/* Enhanced shadows for depth */
+.group-chat-card {
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.16);
+  transition: all 0.25s ease;
+}
+
+.group-chat-card:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 6px 16px rgba(0, 0, 0, 0.24);
+}
+
+/* Blue accent glows */
+.primary-glow {
+  box-shadow: 0 0 0 1px #5865f2, 0 2px 8px rgba(88, 101, 242, 0.2);
+}
+
+/* Enhanced button hover states */
+button:hover {
+  transition: all 0.15s ease;
+}
+
+/* Custom focus states matching OneMind */
+*:focus-visible {
+  outline: 2px solid #5865f2 !important;
+  outline-offset: 2px;
+  border-radius: 4px;
+}
+
+/* Enhanced form control visibility */
+select, input, textarea {
+  border: 1px solid #404449 !important;
+  background-color: #2b2e33 !important;
+}
+
+select:hover, input:hover, textarea:hover {
+  border-color: #555a60 !important;
+}
