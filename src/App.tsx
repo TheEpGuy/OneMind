@@ -8,6 +8,7 @@ import type { SettingsState } from './types/settings'
 import { generateId } from './lib/worldData'
 import { executeCharacterTurn } from './lib/characterAI'
 import { needsSummarization, summarizeOldMessages } from './lib/summarize'
+import { Analytics } from '@vercel/analytics/react';
 
 const STORAGE_KEYS = {
   SETTINGS: 'onemind_settings',
@@ -565,6 +566,7 @@ function App() {
           </div>
         )}
       </main>
+      <Analytics />
     </div>
   )
 }
