@@ -10,7 +10,7 @@ A Multi-AI Roleplay Sandbox built with React and the Vercel AI SDK. Create chara
 
 ## Preview
 
-![OneMind Preview](OneMind%20Preview.jpeg)
+![OneMind Preview](OneMind%20Preview.gif)
 
 ## Architecture
 
